@@ -1,0 +1,167 @@
+
+.header {
+  width: auto;
+  height: 41px;
+  padding-left: 14px;
+  padding-right: 12px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 7px;
+  border-radius: 75px;
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(7.5px);
+
+}
+
+.header__container {
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.login-btn {
+  display: none;
+  //display: flex;
+  align-items: center;
+  padding: 9px 17px 8px 12px;
+  // margin-right: 66px;
+
+  color: #FFF;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  background-color: $accent-blue;
+  border-radius: 34px;
+  transition: background-color $animation-cubic;
+
+  &:focus,
+  &:hover {
+    background-color: $accent-orange;
+  }
+}
+
+.login-btn__icon {
+  margin-right: 5px;
+  width: 9px;
+  height: 9px;
+}
+
+//MAIN-NAV
+
+.menu-btn {
+  height: 14px;
+  background-color: transparent;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  padding: 14px 10px 14px 54px;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: visibility .3s, z-index .5s;
+
+  &.is-open {
+    z-index: 10;
+    visibility: visible;
+
+    .main-nav__overlay {
+      opacity: 1;
+      transition: opacity .3s;
+    }
+
+    .main-nav__container {
+      transform: translateX(0);
+      transition: transform .3s;
+    }
+
+  }
+}
+
+
+.main-nav__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .3s;
+  background: linear-gradient(0deg, rgba(34, 37, 59, .9), rgba(34, 37, 59, .9));
+}
+
+.main-nav__container {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  z-index: 1;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 22px 16px 34px 31px;
+  transform: translateX(100%);
+  transition: transform .3s;
+}
+
+.main-nav__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  background-color: transparent;
+}
+
+.main-nav__icon {
+  width: 15px;
+  height: 15px;
+}
+
+.main-nav__list {
+  margin-top: 17px;
+  font-size: 20px;
+  line-height: 1.5;
+
+  li:not(:last-child) {
+    margin-bottom: 11px;
+  }
+}
+
+.main-nav__login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding: 9px 17px 8px 12px;
+
+  height: 49px;
+  width: 132px;
+
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  border-radius: 54px;
+  color: white;
+  background-color: $accent-blue;
+  transition: background-color $animation-cubic;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-orange;
+  }
+
+  svg {
+    width: 1.11em;
+    margin-right: 8px;
+  }
+}

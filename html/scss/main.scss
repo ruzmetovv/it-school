@@ -1,0 +1,24 @@
+// Base Styles
+@import "utils/reset";
+@import "utils/normalize";
+@import "utils/variables";
+
+// Layout
+@import "layout/container";
+@import "layout/header";
+@import "layout/footer";
+
+// Components
+
+@import "components/hero";
+@import "components/logo";
+@import "components/features";
+@import "components/skills";
+@import "components/learn-process";
+@import "components/price";
+@import "components/slogan";
+
+
+
+
+

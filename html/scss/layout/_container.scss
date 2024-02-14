@@ -1,0 +1,43 @@
+.container {
+  max-width: 440px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.main-wrapper {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  overflow-x: hidden;
+  position: relative;
+
+  &:after {
+
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-image: url("/images/mob-main_bg.jpg");
+    width: 1325px;
+    height: 1325px;
+    background-position: 0 -118px;
+    background-size: cover;
+    transform: translateX(-46.4%);
+  }
+}
+
+.svgLine {
+  margin-top: -40px;
+  height: 55px;
+  background: #00000000 url("/images/svg-line.svg") 50% 0 no-repeat;
+  background-size: cover;
+}
