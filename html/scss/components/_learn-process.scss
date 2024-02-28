@@ -1,34 +1,77 @@
+$text-color:#22253B;
+$accent-blue: #38BFF2;
+$accent-orange:#F15525;
+
+$animation-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 .learn-process {
   padding: 60px 0;
-  background: transparent url("/images/how_bg.webp") center 0 no-repeat;
+  background: transparent url("../images/how_bg.webp") center 0 no-repeat;
+
+  @media screen and (min-width: $desktop){
+    background: none;
+  }
 }
 
 .learn-process__title {
-  font-weight: 600;
+  padding-left: 10%;
+  padding-right: 10%;
   margin-bottom: 18px;
-  text-align: center;
-  font-size: 24px;
-  line-height: 26px;
 }
 
 .learn-process__text {
-  margin-bottom: 33px;
   text-align: center;
+  margin-bottom: 33px;
+  padding-left: 3%;
+  padding-right: 3%;
   font-size: 12px;
   line-height: 17px;
+
+  @media screen and (min-width: $desktop){
+    font-size: 16px;
+    line-height: 20px;
+
+    max-width: 680px;
+    margin: 0 auto 38px;
+  }
+
+}
+
+.learn-process__wrapper{
+
+    position: relative;
+    &:before{
+
+      content: "";
+      position: absolute;
+      top: 6%;
+      display: block;
+      width: 100%;
+      height: 88%;
+      background: rgba(25,26,38,.38);
+      filter: blur(174px);
+    }
 }
 
 .learn-process__mb {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
 
-  background-image: url("/images/MBook.png");
+  background-image: url("../images/MBook.png");
   background-size: cover;
   width: 285px;
   height: 173px;
+
+  @media screen and (min-width: $desktop){
+
+    width: 762px;
+    height: 442px;
+  }
 }
 
 .learn-process__button {
@@ -37,28 +80,58 @@
   border-radius: 25px;
   outline: 10px solid #F1552532;
   background-color: $accent-orange;
+
+  @media screen and (min-width: $desktop){
+    position: relative;
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .learn-process__play {
   width: 7px;
   height: 7px;
+  @media screen and (min-width: $desktop){
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 
 .learn-process__list {
+  position: relative;
   margin-top: 22px;
   padding: 10px 20px;
   background-color: white;
   border-radius: 30px;
 
+  @media screen and (min-width: $desktop){
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    padding: 45px 0 52px 5px;
+  }
+
   li {
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #eaf2f5;
+
+    @media screen and (min-width: $desktop){
+      padding: 0 48px;
+      border-right: 1px solid #eaf2f5;
+      border-bottom: none;
+    }
   }
 
   li:nth-child(3) {
     border-bottom: none;
+    @media screen and (min-width: $desktop){
+      border-right: none;
+    }
   }
 }
 
@@ -69,17 +142,33 @@
   line-height: 1;
   font-weight: 700;
   color: $accent-blue;
+
+  @media screen and (min-width: $desktop){
+    font-size: 77px;
+  }
 }
 
 .learn-process__sub-title {
   margin-bottom: 14px;
   font-size: 20px;
   line-height: 19px;
+
+  @media screen and (min-width: $desktop){
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .learn-process__p {
   font-size: 12px;
   line-height: 14px;
+
+  @media screen and (min-width: $desktop){
+    font-size: 16px;
+    line-height: 23px;
+  }
 }
 
 .learn-process__bottom {
@@ -87,6 +176,16 @@
   margin-top: 20px;
   border-radius: 30px;
   background-color: white;
+
+  @media screen and (min-width: $desktop){
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    max-width: 538px;
+    margin: 25px auto 0 auto;
+    background-color: #fff;
+    border-radius: 110px;
+  }
 }
 
 .learn-process__btm-button {
@@ -113,6 +212,11 @@
   &:hover {
     background-color: $accent-blue;
   }
+
+  @media screen and (min-width: $desktop){
+    margin: 0;
+    width: auto;
+  }
 }
 
 .learn-process__btm-text {
@@ -120,17 +224,65 @@
   font-size: 13px;
   line-height: 18px;
   font-weight: 600;
+
+  @media screen and (min-width: $desktop){
+    margin-left: 24px;
+    font-size: 15px;
+  }
 }
 
-.how-to {
-  display: flex;
-  flex-direction: column;
-  padding: 11px;
+.how-to{
   margin-top: 62px;
-  gap: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   background-color: white;
   border-radius: 20px;
+
+  @media screen and (min-width: $desktop){
+    margin-top: 90px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: #fff;
+    border-radius: 80px;
+  }
 }
+
+.how-to__container{
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: $desktop){
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.how-to__grid{
+  margin-bottom: 12px;
+
+  &--rev{
+    margin-bottom: 0;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+  }
+
+  @media screen and (min-width: $desktop){
+    display: grid;
+    grid-template-columns: minmax(auto,400px) minmax(auto,730px);
+    margin-bottom: 30px;
+    gap: 30px;
+
+    &--rev{
+      margin-bottom: 0;
+      grid-template-columns: minmax(auto,730px) minmax(auto,400px);
+    }
+  }
+}
+
 
 
 .how-to__li {
@@ -143,8 +295,33 @@
   border-radius: 30px;
   background-color: #eaf2f5;
 
+  @media screen and (min-width: $desktop){
+    border-radius: 40px;
+  }
+
+  &--padding1{
+    @media screen and (min-width: $desktop){
+      padding: 60px 90px 64px 100px;
+    }
+
+  }
+  &--padding2{
+    @media screen and (min-width: $desktop){
+      padding-left: 65px;
+      padding-right: 65px;
+    }
+  }
+
   &--noCenter {
     align-items: normal;
+
+  }
+
+  &--marginB{
+    margin-bottom: 12px;
+    @media screen and (min-width: $desktop){
+      margin-bottom: 0;
+    }
   }
 
 }
@@ -152,21 +329,38 @@
 .how-to__img {
   width: 210px;
   height: 180px;
+  @media screen and (min-width: $desktop){
+    width: 270px;
+    height: 230px;
+  }
 }
 
 .how-to__img2 {
   width: 210px;
   height: 198px;
+
+  @media screen and (min-width: $desktop){
+    width: 270px;
+    height: 254px;
+  }
 }
 
 .how-to__subTitle {
   font-size: 20px;
   line-height: 1;
   font-weight: 600;
+  @media screen and (min-width: $desktop){
+    font-size: 32px;
+    line-height: 30px;
+  }
 }
 
 .how-to__description {
   font-size: 12px;
   line-height: 17px;
+  @media screen and (min-width: $desktop){
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 

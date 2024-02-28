@@ -5,6 +5,15 @@
   margin-left: auto;
   margin-right: auto;
 
+  //@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  //  min-width: $tablet;
+  //}
+  @media screen and (min-width: $desktop) {
+    min-width: $desktop;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
 }
 
 
@@ -26,18 +35,59 @@ main {
     position: absolute;
     left: 50%;
     top: 0;
-    background-image: url("/images/mob-main_bg.jpg");
+    background-image: url("../images/mob-main_bg.jpg");
     width: 1325px;
     height: 1325px;
     background-position: 0 -118px;
     background-size: cover;
     transform: translateX(-46.4%);
+
+    @media screen and (min-width: $desktop){
+
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 3095px;
+      height: 4200px;
+      background-color: #f9f8fd;
+      background-image: url("../images/main_bg.jpg");
+      background-position: -12px -657px;
+      background-repeat: no-repeat;
+      transform: translateX(-50%);
+    }
   }
+}
+
+
+.container-relative{
+  position: relative;
+  margin-top: 50px;
+}
+.arrow-btn {
+  position: absolute;
+  top: -3px;
+  left: 45%;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 25px;
+
+  @media screen and (min-width: $desktop){
+    left: 668px;
+    top: -10px;
+
+  }
+
 }
 
 .svgLine {
   margin-top: -40px;
   height: 55px;
-  background: #00000000 url("/images/svg-line.svg") 50% 0 no-repeat;
+  background: #00000000 url("../images/svg-line.svg") 50% 0 no-repeat;
   background-size: cover;
 }

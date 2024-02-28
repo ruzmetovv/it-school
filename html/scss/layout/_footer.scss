@@ -1,5 +1,14 @@
 .footer {
-  padding-bottom: 21px;
+  padding-top: 31px;
+}
+
+.footer__wrapper{
+  @media screen and (min-width: $desktop){
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #D8D8D8;
+  }
 }
 
 .footer__social {
@@ -8,6 +17,9 @@
   li {
     display: flex;
     justify-content: center;
+    @media screen and (min-width: $desktop){
+      justify-content: start;
+    }
   }
 
   li:not(:last-child) {
@@ -56,6 +68,13 @@
 .footer-nav {
   margin-bottom: 40px;
   text-align: center;
+  @media screen and (min-width: $desktop){
+    justify-self: end;
+    margin-right: 42px;
+    text-align: start;
+    margin-bottom: 0;
+  }
+
 
   li:not(:last-child) {
     margin-bottom: 15px;
@@ -78,6 +97,13 @@
   margin-bottom: 28px;
   text-align: center;
   border-bottom: 1px solid #D8D8D8;
+  @media screen and (min-width: $desktop){
+    border-bottom: none;
+    justify-self: end;
+    text-align: start;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
   li:not(:last-child) {
     display: flex;
@@ -107,7 +133,6 @@
   &:hover {
     color: $accent-orange;
   }
-
 }
 
 .footer-cont__info {
@@ -120,10 +145,26 @@
   text-align: center;
   font-size: 12px;
   line-height: 23px;
+  @media screen and (min-width: $desktop){
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 28px;
+    padding-bottom: 32px;
+
+    font-size: 16px;
+    line-height: 23px;
+    color: #8e8e8e;
+  }
 
   p {
     margin-bottom: 13px;
     color: #8e8e8e;
+    @media screen and (min-width: $desktop){
+      margin-bottom: 0;
+      margin-right: auto;
+    }
+
   }
 }
 
@@ -131,6 +172,9 @@
   display: block;
   color: $accent-orange;
   transition: color $animation-cubic;
+  @media screen and (min-width: $desktop){
+    color: #8e8e8e;
+  }
 
   &:focus,
   &:hover {
@@ -139,5 +183,9 @@
   
   &--margin {
     margin-bottom: 5px;
+    @media screen and (min-width: $desktop){
+      margin-right: 66px;
+      margin-bottom: 0;
+    }
   }
 }

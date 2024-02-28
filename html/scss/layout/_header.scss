@@ -1,3 +1,8 @@
+$text-color:#22253B;
+$accent-blue: #38BFF2;
+$accent-orange:#F15525;
+
+$animation-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .header {
   width: auto;
@@ -11,6 +16,14 @@
   background: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(7.5px);
 
+  @media screen and (min-width: $desktop) {
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    height: 51px;
+  }
+
 }
 
 .header__container {
@@ -19,14 +32,70 @@
   align-items: center;
   justify-content: space-between;
 
+  @media screen and (min-width: $desktop){
+    justify-content: normal;
+    height: 51px;
+  }
+
+}
+
+.logo{
+  @media screen and (min-width: $desktop){
+    margin-left: 10px;
+    margin-right: 76px;
+  }
+}
+
+
+.logo__icon {
+  width: 40px;
+  height: 15px;
+
+  @media screen and (min-width: $desktop){
+    width: 53px;
+    height: 20px;
+  }
+}
+
+
+
+
+
+.main-nav{
+  display: none;
+
+  @media screen and (min-width: $desktop){
+    display: block;
+  }
+}
+
+.main-nav__list{
+  display: flex;
+  gap: 47px;
+}
+
+.main-nav__link{
+  font-size: 13px;
+  line-height: 1.1;
+  transition: color $animation-cubic;
+
+  &:hover,
+  &:focus{
+    color: $accent-orange;
+  }
+}
+
+.header__buttons{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
 }
 
 .login-btn {
   display: none;
-  //display: flex;
   align-items: center;
   padding: 9px 17px 8px 12px;
-  // margin-right: 66px;
 
   color: #FFF;
   font-size: 12px;
@@ -35,11 +104,16 @@
   line-height: 1;
   background-color: $accent-blue;
   border-radius: 34px;
+  cursor: pointer;
   transition: background-color $animation-cubic;
 
   &:focus,
   &:hover {
     background-color: $accent-orange;
+  }
+
+  @media screen and (min-width: $desktop){
+    display: flex;
   }
 }
 
@@ -47,16 +121,42 @@
   margin-right: 5px;
   width: 9px;
   height: 9px;
+
+  @media screen and (min-width: $desktop){
+    margin-right: 2px;
+    width: 13px;
+    height: 12px;
+  }
 }
 
-//MAIN-NAV
+.sign-up{
+  display: none;
+  font-size: 13px;
+  line-height: 1.1;
+  transition: color $animation-cubic;
+
+  &:hover,
+  &:focus{
+    color: $accent-orange;
+  }
+
+  @media screen and (min-width: $desktop){
+    display: block;
+  }
+}
+
+///////////MOB-NAV
 
 .menu-btn {
   height: 14px;
   background-color: transparent;
+
+  @media screen and (min-width: $desktop){
+    display: none;
+  }
 }
 
-.main-nav {
+.mob-nav {
   position: fixed;
   top: 0;
   right: 0;
@@ -74,21 +174,25 @@
     z-index: 10;
     visibility: visible;
 
-    .main-nav__overlay {
+    .mob-nav__overlay {
       opacity: 1;
       transition: opacity .3s;
     }
 
-    .main-nav__container {
+    .mob-nav__container {
       transform: translateX(0);
       transition: transform .3s;
     }
 
   }
+
+  @media screen and (min-width: $desktop){
+    display: none;
+  }
 }
 
 
-.main-nav__overlay {
+.mob-nav__overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -101,7 +205,7 @@
   background: linear-gradient(0deg, rgba(34, 37, 59, .9), rgba(34, 37, 59, .9));
 }
 
-.main-nav__container {
+.mob-nav__container {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -114,7 +218,7 @@
   transition: transform .3s;
 }
 
-.main-nav__btn {
+.mob-nav__btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,22 +226,30 @@
   background-color: transparent;
 }
 
-.main-nav__icon {
+.mob-nav__icon {
   width: 15px;
   height: 15px;
 }
 
-.main-nav__list {
+.mob-nav__list {
   margin-top: 17px;
-  font-size: 20px;
-  line-height: 1.5;
-
   li:not(:last-child) {
     margin-bottom: 11px;
   }
 }
 
-.main-nav__login-btn {
+.mob-nav__link{
+  font-size: 20px;
+  line-height: 1.5;
+  transition: color $animation-cubic;
+
+  &:hover,
+  &:focus{
+    color: $accent-orange;
+  }
+}
+
+.mob-nav__login-btn {
   display: flex;
   justify-content: center;
   align-items: center;

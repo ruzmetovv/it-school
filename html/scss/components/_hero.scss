@@ -1,7 +1,24 @@
+$text-color:#22253B;
+$accent-blue: #38BFF2;
+$accent-orange:#F15525;
+
+$animation-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 .hero {
   text-align: center;
   padding-top: 24px;
 
+  @media screen and (min-width: $desktop){
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.hero__container{
+  @media screen and (min-width: $desktop){
+    display: flex;
+  }
 }
 
 .hero__title {
@@ -18,6 +35,16 @@
     margin-left: 5px;
     margin-right: 5px;
   }
+
+  @media screen and (min-width: $desktop){
+    margin:  0 0 28px 0;
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 1;
+    max-width: 100%;
+    text-align: start;
+
+  }
 }
 
 .hero__span {
@@ -28,10 +55,6 @@
   }
 }
 
-.hero__container {
-  padding-top: 9px;
-  border-top: solid 1px #DEDEDE;
-}
 
 .hero__slogan {
   margin-bottom: 21px;
@@ -52,7 +75,7 @@
   background-color: $accent-orange;
 
   border-radius: 35px;
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
   line-height: 96.7%; /* 17.404px */
   letter-spacing: -0.54px;
@@ -61,6 +84,17 @@
   &:hover {
     background-color: $accent-blue;
   }
+  @media screen and (min-width: $desktop){
+    width: 288px;
+    margin-right: auto;
+    margin-left: 0;
+
+    border-radius: 82px;
+    font-size: 20px;
+    line-height: 96.69%;
+    letter-spacing: -.03em;
+  }
+
 }
 
 .icon-arrow-top {
@@ -68,6 +102,9 @@
   height: 15px;
   width: 15px;
 
+  @media screen and (min-width: $desktop){
+    margin-left: 15px;
+  }
 }
 
 .hero__img {
@@ -79,35 +116,38 @@
   width: 246.667px;
   height: 239.905px;
   border-radius: 257.667px;
-  //  border: 2px solid #FFF;
 
-  background: linear-gradient(260deg, #FFF -31.68%, rgba(255, 255, 255, 0.00) 87.52%), rgba(255, 255, 255, 0.30);
-  box-shadow: 0 30px 100px 0 rgba(0, 129, 170, 0.06);
-  backdrop-filter: blur(30px);
+  //  border: 2px solid #FFF;
+  //background: linear-gradient(260deg, #fff -31.68%, rgba(255, 255, 255, 0) 87.52%), rgba(255, 255, 255, 0.3);
+  //box-shadow: 0 30px 100px 0 rgba(0, 129, 170, 0.06);
+  //backdrop-filter: blur(30px);
+
+  @media screen and (min-width: $desktop){
+    margin-top: 4px;
+    margin-left: 114px;
+    margin-right: 0;
+    width: 397px;
+    height: 410px;
+
+    backdrop-filter: none;
+
+  }
 
   div {
-    background-image: url("/images/hero.svg");
+    background-image: url("../images/hero.svg");
     background-size: cover;
     background-position: center;
     width: 210px;
-    height: 218px;
+    height: 219px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: $desktop){
+      width: 396px;
+      height: 413px;
+    }
+
   }
-}
-
-.hero__arrow-btn {
-  width: 37px;
-  height: 37px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 26px;
-
-  background-color: white;
-  border-radius: 25px;
 }
 
 

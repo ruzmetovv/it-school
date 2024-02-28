@@ -1,489 +1,555 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>YtYt</title>
-	<link rel="stylesheet" href="./scss/main.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YtYt</title>
+    <link rel="stylesheet" href="./scss/main.css" />
+  </head>
 
-<body>
-<header class="header">
-	<div class="header__container">
-		<a class="logo" href="">
-			<svg class="logo__icon">
-				<use href="/images/sprite.svg#icon-logo"></use>
-			</svg>
-		</a>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a class="logo" href="">
+          <svg class="logo__icon">
+            <use href="./images/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
 
-		<button type="button" class="login-btn">
-			<svg class="login-btn__icon">
-				<use href="/images/sprite.svg#icon-arrow"></use>
-			</svg>
-			Войти
-		</button>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li>
+              <a class="main-nav__link" href="#">Чему вы научитесь</a>
+            </li>
+            <li>
+              <a class="main-nav__link" href="#">Онлайн-платформа</a>
+            </li>
+            <li>
+              <a class="main-nav__link" href="#">Стоимость</a>
+            </li>
+            <li>
+              <a class="main-nav__link" href="#">Контакты</a>
+            </li>
 
-		<button type="button" class="menu-btn js-open-menu">
-			<svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" fill="none">
-				<rect width="17" height="2" rx="1" fill="#F15525"/>
-				<rect y="6" width="17" height="2" rx="1" fill="#F15525"/>
-				<rect y="12" width="17" height="2" rx="1" fill="#F15525"/>
-			</svg>
-		</button>
+          </ul>
+        </nav>
 
-	</div>
+        <div class="header__buttons">
+          <a class="sign-up" href="#">Регистрация</a>
+          <a type="button" class="login-btn">
+            <svg class="login-btn__icon">
+              <use href="./images/sprite.svg#icon-arrow"></use>
+            </svg>
+             Войти
+          </a>
+        </div>
 
-
-</header>
-<nav class="main-nav js-menu-container">
-	<div class="main-nav__overlay"></div>
-
-	<div class="main-nav__container">
-
-		<button class="main-nav__btn js-close-menu" type="button">
-			<svg class="main-nav__icon">
-				<use href="/images/sprite.svg#icon-cross"></use>
-			</svg>
-		</button>
-
-		<ul class="main-nav__list">
-			<li>
-				<a class="main-nav__link" href="#">Чему вы научитесь</a>
-			</li>
-			<li>
-				<a class="main-nav__link" href="#">Онлайн-платформа</a>
-			</li>
-			<li>
-				<a class="main-nav__link" href="#">Стоимость</a>
-			</li>
-			<li>
-				<a class="main-nav__link" href="#">Контакты</a>
-			</li>
-			<li>
-				<a class="main-nav__link" href="#">Регистрация</a>
-			</li>
-		</ul>
-
-		<a class="main-nav__login-btn" href="">
-			<svg>
-				<use href="/images/sprite.svg#icon-arrow"></use>
-			</svg>
-			Войти
-		</a>
-	</div>
-</nav>
-
-<main>
-	<div class="main-wrapper">
-
-		<section class="hero">
-			<div class="container">
-				<h1 class="hero__title">Школа
-					<span class="hero__span">{</span><strong>программирования</strong><span
-						 class="hero__span hero__span--marginR">}</span>
-				                        для тех, кому нужны реальные навыки,
-				                        а не просто сертификат
-				</h1>
-				<div class="hero__container">
-					<p class="hero__slogan">Пройдите тестирование, чтобы получить доступ к бесплатным вводным урокам</p>
-					<button class="hero__btn" type="button">Пройти тестирование
-						<svg class="icon-arrow-top">
-							<use href="/images/sprite.svg#icon-arrow-top"></use>
-						</svg>
-					</button>
-
-					<div class="hero__img">
-						<div></div>
-					</div>
-
-					<button class="hero__arrow-btn" type="button">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
-							<path
-								 d="M9 1C9 0.447715 8.55228 -2.41411e-08 8 0C7.44772 2.41411e-08 7 0.447715 7 1L9 1ZM7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L15.0711 8.34315C15.4616 7.95262 15.4616 7.31946 15.0711 6.92893C14.6805 6.53841 14.0474 6.53841 13.6569 6.92893L8 12.5858L2.34315 6.92893C1.95262 6.53841 1.31946 6.53841 0.928932 6.92893C0.538408 7.31946 0.538408 7.95262 0.928933 8.34315L7.29289 14.7071ZM7 1L7 14L9 14L9 1L7 1Z"
-								 fill="#22253B"/>
-						</svg>
-					</button>
-
-				</div>
-			</div>
-		</section>
+        <button type="button" class="menu-btn js-open-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" fill="none">
+            <rect width="17" height="2" rx="1" fill="#F15525" />
+            <rect y="6" width="17" height="2" rx="1" fill="#F15525" />
+            <rect y="12" width="17" height="2" rx="1" fill="#F15525" />
+          </svg>
+        </button>
+      </div>
+    </header>
 
 
-		<div class="svgLine"></div>
+    <nav class="mob-nav js-menu-container">
+      <div class="mob-nav__overlay"></div>
 
-		<section class="skills">
-			<div class="container">
-				<h2 class="skills__title">Какие технологии вы изучите:</h2>
-				<ul class="skills__grid">
-					<li class="skills__grid-item-1">Язык программирования Python</li>
-					<li class="skills__grid-item-2">Сети</li>
-					<li class="skills__grid-item-3">Базы данных</li>
-					<li class="skills__grid-item-4">Фреймворки Flask и Django</li>
-					<li class="skills__grid-item-5">Отладка и тестирование</li>
-					<li class="skills__grid-item-6">Docker</li>
-					<li class="skills__grid-item-7">Git</li>
-				</ul>
-			</div>
-		</section>
+      <div class="mob-nav__container">
+        <button class="mob-nav__btn js-close-menu" type="button">
+          <svg class="mob-nav__icon">
+            <use href="./images/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
 
-		<section class="features">
-			<div class="container">
-				<h2 class="features__title">Обучение в YtYt – это удобно и результативно</h2>
-				<div class="features__container">
-					<ul class="features__list">
-						<li class="">
-							<svg class="features__icon">
-								<use href="/images/sprite.svg#icon-f1"></use>
-							</svg>
-						</li>
-						<li>
-							<h3 class="features__sub-title">Огромное количество практики</h3>
-						</li>
-						<li>
-							<p class="features__text">Более 500 самостоятельных заданий и 20 полноценных больших проектов</p>
-						</li>
-					</ul>
-					<ul class="features__list">
-						<li class="">
-							<svg class="features__icon">
-								<use href="/images/sprite.svg#icon-f5"></use>
-							</svg>
-						</li>
-						<li>
-							<h3 class="features__sub-title">Прямая связь
-							                                с опытными программистами</h3>
-						</li>
-						<li>
-							<p class="features__text">Задавайте вопросы и отправляйте свой код на проверку</p>
-						</li>
-					</ul>
-					<ul class="features__list">
-						<li class="">
-							<svg class="features__icon">
-								<use href="/images/sprite.svg#icon-f3"></use>
-							</svg>
-						</li>
-						<li>
-							<h3 class="features__sub-title">Простое и понятное изложение</h3>
-						</li>
-						<li>
-							<p class="features__text">Вместо заумных терминов – примеры из реального мира</p>
-						</li>
-					</ul>
+        <ul class="mob-nav__list">
+          <li>
+            <a class="mob-nav__link" href="#">Чему вы научитесь</a>
+          </li>
+          <li>
+            <a class="mob-nav__link" href="#">Онлайн-платформа</a>
+          </li>
+          <li>
+            <a class="mob-nav__link" href="#">Стоимость</a>
+          </li>
+          <li>
+            <a class="mob-nav__link" href="#">Контакты</a>
+          </li>
+          <li>
+            <a class="mob-nav__link" href="#">Регистрация</a>
+          </li>
+        </ul>
 
-					<ul class="features__list">
-						<li class="">
-							<svg class="features__icon">
-								<use href="/images/sprite.svg#icon-f4"></use>
-							</svg>
-						</li>
-						<li>
-							<h3 class="features__sub-title">Гибкий график занятий</h3>
-						</li>
-						<li>
-							<p class="features__text">Учитесь в любое время и в удобном для вас темпе</p>
-						</li>
-					</ul>
+        <a class="mob-nav__login-btn" href="">
+          <svg>
+            <use href="./images/sprite.svg#icon-arrow"></use>
+          </svg>
+          Войти
+        </a>
+      </div>
+    </nav>
 
-					<ul class="features__list">
-						<li class="">
-							<svg class="features__icon">
-								<use href="/images/sprite.svg#icon-f2"></use>
-							</svg>
-						</li>
-						<li>
-							<h3 class="features__sub-title">Современные методики обучения</h3>
-						</li>
-						<li>
-							<p class="features__text">Спиральное обучение: на каждом витке вы узнаете что-то новое об уже знакомых вещах</p>
-						</li>
-					</ul>
+    <main>
+      <div class="main-wrapper">
 
-					<ul class="features__list">
-						<li class="">
-							<svg class="features__icon">
-								<use href="/images/sprite.svg#icon-f6"></use>
-							</svg>
-						</li>
-						<li>
-							<h3 class="features__sub-title">Гибкая оплата частями</h3>
-						</li>
-						<li>
-							<p class="features__text">Платите только за тот материал, который изучаете прямо сейчас, а не за весь курс сразу</p>
-						</li>
-					</ul>
+        <section class="hero">
+          <div class="container">
 
-					<ul class="features__list features__gridItem7">
-						<li class="">
-							<svg class="features__icon features__icon--marginR">
-								<use href="/images/sprite.svg#icon-f7"></use>
-							</svg>
-						</li>
-						<li class="">
-							<h3 class="features__sub-title">Быстрый и легкий возврат</h3>
-							<p class="features__text features__text--marginT">Если передумаете учиться – вернем деньги за 3 рабочих дня</p>
-						</li>
-					</ul>
-				</div>
+            <div class="hero__container">
+              <div>
+                <h1 class="hero__title">
+                  Школа <span class="hero__span">{</span><strong>программирования</strong
+                ><span class="hero__span hero__span--marginR">}</span> <br>
+                  для тех, кому нужны <br>реальные навыки, <br>а не просто сертификат
+                </h1>
 
-			</div>
-		</section>
+                <button class="hero__btn" type="button">
+                  Пройти тестирование
+                  <svg class="icon-arrow-top">
+                    <use href="./images/sprite.svg#icon-arrow-top"></use>
+                  </svg>
+                </button>
+              </div>
 
+              <div class="hero__img">
+                <div></div>
+              </div>
+            </div>
 
-		<section class="learn-process">
-			<div class="container">
-				<h2 class="learn-process__title">Удобная онлайн-платформа</h2>
-				<p class="learn-process__text">Изучайте теорию, запускайте интерактивные примеры, пишите код и общайтесь с наставником. Вместо видеоуроков - текст, наглядные иллюстрации и много живых примеров кода, которые можно запустить прямо в браузере.</p>
+          </div>
+        </section>
 
-				<div class="learn-process__mb">
-					<button class="learn-process__button" type="button">
-						<svg class="learn-process__play">
-							<use href="/images/sprite.svg#icon-triangle"></use>
-						</svg>
-					</button>
-				</div>
+        <div class="container-relative">
+          <button class="arrow-btn" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+            <path
+               d="M9 1C9 0.447715 8.55228 -2.41411e-08 8 0C7.44772 2.41411e-08 7 0.447715 7 1L9 1ZM7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L15.0711 8.34315C15.4616 7.95262 15.4616 7.31946 15.0711 6.92893C14.6805 6.53841 14.0474 6.53841 13.6569 6.92893L8 12.5858L2.34315 6.92893C1.95262 6.53841 1.31946 6.53841 0.928932 6.92893C0.538408 7.31946 0.538408 7.95262 0.928933 8.34315L7.29289 14.7071ZM7 1L7 14L9 14L9 1L7 1Z"
+               fill="#22253B"
+            />
+          </svg>
+          </button>
 
+          <div class="svgLine"></div>
+        </div>
 
-				<ul class="learn-process__list">
-					<li>
-						<span class="learn-process__num">01</span>
-						<h3 class="learn-process__sub-title">Весь материал разбит на небольшие уроки</h3>
-						<p class="learn-process__p">Теория и практика подаются маленькими порциями. Так вам будет легче усваивать новые знания.</p>
-					</li>
-					<li>
-						<span class="learn-process__num">02</span>
-						<h3 class="learn-process__sub-title">Обучение через практику</h3>
-						<p class="learn-process__p">Всё, что вы узнали, вы тут же начинаете применять на практике. Вы сразу видите результаты своего труда.</p>
-					</li>
-					<li>
-						<span class="learn-process__num">03</span>
-						<h3 class="learn-process__sub-title">Нет ограничений по времени</h3>
-						<p class="learn-process__p">Можно совмещать учёбу с работой и другими делами. Не нужно выпрашивать академический отпуск, если пришлось сделать перерыв.</p>
-					</li>
-				</ul>
+        <section class="skills">
+          <div class="container">
+            <h2 class="skills__title">Какие технологии вы изучите:</h2>
+            <div class="skills__wrapper">
+              <img class="skills__pc-img" src="./images/skills.svg" alt="">
+              <div>
+                <ul class="skills__grid">
+                  <li class="skills__grid-item-1">Язык программирования Python</li>
+                  <li class="skills__grid-item-2">Сети</li>
+                  <li class="skills__grid-item-3">Базы данных</li>
+                  <li class="skills__grid-item-4">Фреймворки Flask и Django</li>
+                  <li class="skills__grid-item-5">Отладка и тестирование</li>
+                  <li class="skills__grid-item-6">Docker</li>
+                  <li class="skills__grid-item-7">Git</li>
+                </ul>
+                <strong class="skills__description">Именно эти навыки работодатели хотят видеть у начинающих программистов в 2024 году</strong>
+              </div>
+            </div>
+          </div>
+        </section>
 
-				<div class="learn-process__bottom">
-					<button class="learn-process__btm-button" type="button">Начать обучение
-						<svg class="icon-arrow-top">
-							<use href="/images/sprite.svg#icon-arrow-top"></use>
-						</svg>
-					</button>
-					<p class="learn-process__btm-text">Первые 14 уроков бесплатно</p>
-				</div>
-			</div>
+        <section class="features">
+          <div class="container">
+            <h2 class="features__title">Лучше, чем просто курсы по программированию</h2>
+            <div class="features__container">
+              <ul class="features__list">
+                <li class="">
+                  <svg class="features__icon">
+                    <use href="./images/sprite.svg#icon-f1"></use>
+                  </svg>
+                </li>
+                <li>
+                  <h3 class="features__sub-title">Огромное количество практики</h3>
+                </li>
+                <li>
+                  <p class="features__text">Более 500 самостоятельных заданий и 20 полноценных больших проектов</p>
+                </li>
+              </ul>
+              <ul class="features__list">
+                <li class="">
+                  <svg class="features__icon">
+                    <use href="./images/sprite.svg#icon-f2"></use>
+                  </svg>
+                </li>
+                <li>
+                  <h3 class="features__sub-title">Современные методики обучения</h3>
+                </li>
+                <li>
+                  <p class="features__text">
+                    Спиральное обучение: на каждом витке вы узнаете что-то новое об уже знакомых вещах
+                  </p>
+                </li>
+              </ul>
 
-			<div class="container">
-				<ul class="how-to">
+              <ul class="features__list">
+                <li class="">
+                  <svg class="features__icon">
+                    <use href="./images/sprite.svg#icon-f3"></use>
+                  </svg>
+                </li>
+                <li>
+                  <h3 class="features__sub-title">Простое и понятное изложение</h3>
+                </li>
+                <li>
+                  <p class="features__text">Вместо заумных терминов – примеры из реального мира</p>
+                </li>
+              </ul>
 
-					<li class="how-to__li">
-						<img class="how-to__img" src="images/sup.png" alt="">
-					</li>
-					<li class="how-to__li how-to__li--noCenter">
-						<h3 class="how-to__subTitle">Помощь и поддержка</h3>
-						<p class="how-to__description">Если в процессе обучения возникнут сложности, вы всегда сможете задать вопрос своему наставнику.</p>
-						<p class="how-to__description">Раз в несколько уроков вы будете получать большое задание, которое нужно будет сдавать на проверку код-ревьюеру. Он внимательно изучит ваш код, найдет ошибки и поможет вам стать лучше.</p>
-					</li>
+              <ul class="features__list">
+                <li class="">
+                  <svg class="features__icon">
+                    <use href="./images/sprite.svg#icon-f4"></use>
+                  </svg>
+                </li>
+                <li>
+                  <h3 class="features__sub-title">Гибкий график занятий</h3>
+                </li>
+                <li>
+                  <p class="features__text">Учитесь в любое время и в удобном для вас темпе</p>
+                </li>
+              </ul>
 
-					<li class="how-to__li ">
-						<img class="how-to__img2" src="images/sup2.png" alt="">
-					</li>
-					<li class="how-to__li how-to__li--noCenter">
-						<h3 class="how-to__subTitle">Методика обучения</h3>
-						<p class="how-to__description">Весь учебный материал структурирован по принципу «спирального обучения». Сначала вы получаете базовые знания, а затем на каждом витке спирали углубляетесь в изученные темы, доводя их понимание до совершенства. Такой подход упрощает обучение и гарантирует, что вы не пропустите ничего важного.</p>
+              <ul class="features__list">
+                <li class="">
+                  <svg class="features__icon">
+                    <use href="./images/sprite.svg#icon-f5"></use>
+                  </svg>
+                </li>
+                <li>
+                  <h3 class="features__sub-title features__sub-title--noPadding">Прямая связь с опытными программистами</h3>
+                </li>
+                <li>
+                  <p class="features__text">Задавайте вопросы и отправляйте свой код на проверку</p>
+                </li>
+              </ul>
 
-					</li>
+              <ul class="features__list">
+                <li class="">
+                  <svg class="features__icon">
+                    <use href="./images/sprite.svg#icon-f6"></use>
+                  </svg>
+                </li>
+                <li>
+                  <h3 class="features__sub-title">Оплата небольшими частями</h3>
+                </li>
+                <li>
+                  <p class="features__text">
+                    Платите только за тот материал, который изучаете прямо сейчас, а не за весь курс сразу
+                  </p>
+                </li>
+              </ul>
 
-				</ul>
-			</div>
+              <ul class="features__list features__gridItem7">
+                <li class="">
+                  <svg class="features__icon features__icon--marginR">
+                    <use href="./images/sprite.svg#icon-f7"></use>
+                  </svg>
+                </li>
+                <li class="">
+                  <h3 class="features__sub-title">Быстрый и легкий возврат</h3>
+                  <p class="features__text features__text--marginT">
+                    Если передумаете учиться – вернем деньги за 3 рабочих дня
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-		</section>
+        <section class="learn-process">
+          <div class="container">
+            <h2 class="learn-process__title">Удобная онлайн-платформа</h2>
+            <p class="learn-process__text">
+              Изучайте теорию, запускайте интерактивные примеры, пишите код и общайтесь с наставником. Вместо
+              видеоуроков - текст, наглядные иллюстрации и много живых примеров кода, которые можно запустить прямо в
+              браузере.
+            </p>
+            <div class="learn-process__wrapper">
+              <div class="learn-process__mb">
+                <button class="learn-process__button" type="button">
+                  <svg class="learn-process__play">
+                    <use href="./images/sprite.svg#icon-triangle"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
 
-		<section class="price">
-			<div class="container">
-				<h2 class="price__title">Стоимость обучения</h2>
+            <ul class="learn-process__list">
+              <li>
+                <span class="learn-process__num">01</span>
+                <h3 class="learn-process__sub-title">Весь материал разбит на небольшие уроки</h3>
+                <p class="learn-process__p">
+                  Теория и практика подаются маленькими порциями. Так вам будет легче усваивать новые знания.
+                </p>
+              </li>
+              <li>
+                <span class="learn-process__num">02</span>
+                <h3 class="learn-process__sub-title">Обучение через практику</h3>
+                <p class="learn-process__p">
+                  Всё, что вы узнали, вы тут же начинаете применять на практике. Вы сразу видите результаты своего
+                  труда.
+                </p>
+              </li>
+              <li>
+                <span class="learn-process__num">03</span>
+                <h3 class="learn-process__sub-title">Нет ограничений по времени</h3>
+                <p class="learn-process__p">
+                  Можно совмещать учёбу с работой и другими делами. Не нужно выпрашивать академический отпуск, если
+                  пришлось сделать перерыв.
+                </p>
+              </li>
+            </ul>
 
-				<ul class="price__list">
+            <div class="learn-process__bottom">
+              <button class="learn-process__btm-button" type="button">
+                Начать обучение
+                <svg class="icon-arrow-top">
+                  <use href="./images/sprite.svg#icon-arrow-top"></use>
+                </svg>
+              </button>
+              <p class="learn-process__btm-text">Первые 14 уроков бесплатно</p>
+            </div>
+          </div>
 
-					<li class="price__li">
-						<svg class="price__icon">
-							<use href="/images/sprite.svg#icon-price1"></use>
-						</svg>
-						<p class="price__text">Весь курс разбит на несколько блоков. Оплата поэтапная вы платите только за тот блок, который сейчас проходите.</p>
-					</li>
+          <div class="how-to">
+            <div class="how-to__container">
+              <ul class="how-to__grid">
+                <li class="how-to__li how-to__li--marginB how-to__li--padding2">
+                  <img class="how-to__img" src="./images/sup.png" alt="" />
+                </li>
+                <li class="how-to__li how-to__li--noCenter how-to__li--padding1">
+                  <h3 class="how-to__subTitle">Помощь и поддержка</h3>
+                  <p class="how-to__description">
+                    Наставник всегда рядом - он поможет справиться с трудностями и подскажет, почему код работает не так, как хочется.
+                  </p>
+                  <p class="how-to__description">
+                    А код-ревьюер научит вас писать код так, как его пишут профессионалы: лаконично, аккуратно и понятно. Иногда вы будете его любить, а иногда - ненавидеть за требовательность :)
+                  </p>
+                </li>
+              </ul>
+              <ul class="how-to__grid how-to__grid--rev ">
+                <li class="how-to__li how-to__li--noCenter how-to__li--padding1">
+                  <h3 class="how-to__subTitle">Работаем на результат</h3>
+                  <p class="how-to__description">
+                    Мы не ограничиваем время общения со студентами, как это делают другие курсы. Если у вас возникнут сложности с пониманием материала или написанием кода, то наставник и код-ревьюер помогут вам разобраться до конца, и неважно, сколько времени это у них займёт. Наша цель - дать вам полный комплект навыков, необходимых для трудоустройства.
+                  </p>
+                </li>
+                <li class="how-to__li how-to__li--marginB how-to__li--padding2" >
+                  <img class="how-to__img2" src="./images/sup2.png" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-					<li class="price__li">
-						<svg class="price__icon">
-							<use href="/images/sprite.svg#icon-price2"></use>
-						</svg>
-						<p class="price__text">Любой из блоков вы можете оплатить в рассрочку</p>
-					</li>
+        <section class="price">
+          <div class="container">
+            <h2 class="price__title">Стоимость обучения</h2>
 
-					<li class="price__li">
-						<svg class="price__icon">
-							<use href="/images/sprite.svg#icon-price3"></use>
-						</svg>
-						<p class="price__text">Если передумаете учиться, то возврат можно оформить в любой момент. Возвращаем деньги за 3 рабочих дня.</p>
-					</li>
+            <ul class="price__list">
+              <li class="price__li">
+                <svg class="price__icon price__icon1">
+                  <use href="./images/sprite.svg#icon-price1"></use>
+                </svg>
+                <p class="price__text">
+                  Весь курс разбит на несколько блоков. Оплата поэтапная вы платите только за тот блок, который сейчас
+                  проходите.
+                </p>
+              </li>
 
-				</ul>
-			</div>
+              <li class="price__li">
+                <svg class="price__icon price__icon2">
+                  <use href="./images/sprite.svg#icon-price2"></use>
+                </svg>
+                <p class="price__text">Любой из блоков вы можете оплатить в рассрочку</p>
+              </li>
 
-			<div class="container">
-				<div class="price-table__wrapper">
-					<table class="price-table ">
-						<tr class="price-table__row">
-							<td class="price-table__col price-table__col--blue">Блок</td>
-							<td class="price-table__col price-table__col--blue">Стоимость (₽)</td>
-							<td class="price-table__col price-table__col--blue">Время обучения</td>
-						</tr>
-						<tr class="price-table__row">
-							<td class="price-table__col">Введение в программирование</td>
-							<td class="price-table__col">0</td>
-							<td class="price-table__col">0.5</td>
-						</tr>
-						<tr class="price-table__row">
-							<td class="price-table__col">Основы программирования Python</td>
-							<td class="price-table__col">9 900</td>
-							<td class="price-table__col">1</td>
-						</tr>
-						<tr class="price-table__row">
-							<td class="price-table__col">Python, продвинутый уровень</td>
-							<td class="price-table__col">14 900</td>
-							<td class="price-table__col">2.5</td>
-						</tr>
-						<tr class="price-table__row">
-							<td class="price-table__col">Сети + фреймворк Flask</td>
-							<td class="price-table__col">14 900</td>
-							<td class="price-table__col">2.5</td>
-						</tr>
-						<tr class="price-table__row">
-							<td class="price-table__col">Базы данных</td>
-							<td class="price-table__col">14 900</td>
-							<td class="price-table__col">2</td>
-						</tr>
-						<tr class="price-table__row">
-							<td class="price-table__col">Фреймворк Django</td>
-							<td class="price-table__col">14 900</td>
-							<td class="price-table__col">2</td>
-						</tr>
-						<tr class="price-table__row">
-							<td class="price-table__col">Разработка «боевого» проекта</td>
-							<td class="price-table__col">9 900</td>
-							<td class="price-table__col">1.5</td>
-						</tr>
-						<tr class="price-table__row">
-							<td class="price-table__col price-table__col--bold">Итого</td>
-							<td class="price-table__col price-table__col--bold">79 400</td>
-							<td class="price-table__col price-table__col--bold">12</td>
-						</tr>
-					</table>
-				</div>
-			</div>
+              <li class="price__li">
+                <svg class="price__icon price__icon3">
+                  <use href="./images/sprite.svg#icon-price3"></use>
+                </svg>
+                <p class="price__text">
+                  Если передумаете учиться, то возврат можно оформить в любой момент. Возвращаем деньги за 3 рабочих
+                  дня.
+                </p>
+              </li>
+            </ul>
+          </div>
 
-			<div class="container">
-				<ul class="price-slogan">
-					<li>
-						<svg class="price-slogan__icon">
-							<use href="/images/sprite.svg#icon-ad"></use>
-						</svg>
-					</li>
-					<li>
-						<p class="price-slogan__text">Все блоки проходятся строго по порядку. Пропустить какой-то блок или начать обучение с середины нельзя. Только так мы можем гарантировать, что вы получите все знания, предусмотренные учебной программой.</p>
-					</li>
-					<li>
-						<button class="price-slogan__btn" type="button">Начать обучение
-							<svg class="icon-arrow-top">
-								<use href="/images/sprite.svg#icon-arrow-top"></use>
-							</svg>
-						</button>
-					</li>
-				</ul>
-			</div>
-		</section>
+          <div class="container">
+            <div class="price-table">
+              <table class="price-table__table">
+                <tr class="price-table__row">
+                  <td class="price-table__col price-table__col--blue price-table__col--w46">Блок</td>
+                  <td class="price-table__col price-table__col--blue">Стоимость (₽)</td>
+                  <td class="price-table__col price-table__col--blue">Время обучения</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__col price-table__col--w46">Введение в программирование</td>
+                  <td class="price-table__col">0</td>
+                  <td class="price-table__col">0.5</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__col price-table__col--w46">Основы программирования Python</td>
+                  <td class="price-table__col">9 900</td>
+                  <td class="price-table__col">1</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__col price-table__col--w46">Python, продвинутый уровень</td>
+                  <td class="price-table__col">14 900</td>
+                  <td class="price-table__col">2.5</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__col price-table__col--w46">Сети + фреймворк Flask</td>
+                  <td class="price-table__col">14 900</td>
+                  <td class="price-table__col">2.5</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__col price-table__col--w46">Базы данных</td>
+                  <td class="price-table__col">14 900</td>
+                  <td class="price-table__col">2</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__col price-table__col--w46">Фреймворк Django</td>
+                  <td class="price-table__col">14 900</td>
+                  <td class="price-table__col">2</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__col price-table__col--w46">Разработка «боевого» проекта</td>
+                  <td class="price-table__col">9 900</td>
+                  <td class="price-table__col">1.5</td>
+                </tr>
+                <tr class="price-table__row">
+                  <td class="price-table__col price-table__col--bold price-table__col--w46">Итого</td>
+                  <td class="price-table__col price-table__col--bold">79 400</td>
+                  <td class="price-table__col price-table__col--bold">12</td>
+                </tr>
+              </table>
+            </div>
+          </div>
 
-	</div>
-</main>
-<footer class="footer">
-	<div class="container">
+          <div class="container">
+            <ul class="price-slogan">
+              <li>
+                <svg class="price-slogan__icon">
+                  <use href="./images/sprite.svg#icon-ad"></use>
+                </svg>
+              </li>
+              <li>
+                <p class="price-slogan__text">
+                  Все блоки проходятся строго по порядку. Пропустить какой-то блок или начать обучение с середины
+                  нельзя. Только так мы можем гарантировать, что вы получите все знания, предусмотренные учебной
+                  программой.
+                </p>
+              </li>
+              <li>
+                <button class="price-slogan__btn" type="button">
+                  Начать обучение
+                  <svg class="icon-arrow-top">
+                    <use href="./images/sprite.svg#icon-arrow-top"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
 
-		<ul class="footer__social">
-			<li>
-				<a href="">
-					<svg class="footer__logo">
-						<use href="/images/sprite.svg#icon-logo_footer"></use>
-					</svg>
-				</a>
-				<p class="footer__text">Школа <br> программирования</p>
-			</li>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+        <ul class="footer__social">
+          <li>
+            <a href="">
+              <svg class="footer__logo">
+                <use href="./images/sprite.svg#icon-logo_footer"></use>
+              </svg>
+            </a>
+            <p class="footer__text">
+              Школа <br />
+              программирования
+            </p>
+          </li>
 
-			<li>
-				<a href="" class="footer__link">
-					<svg class="footer__icon">
-						<use href="/images/sprite.svg#icon-inst"></use>
-					</svg>
-				</a>
-				<a href="" class="footer__link">
-					<svg class="footer__icon">
-						<use href="/images/sprite.svg#icon-vk"></use>
-					</svg>
-				</a>
-				<a href="" class="footer__link">
-					<svg class="footer__icon">
-						<use href="/images/sprite.svg#icon-fb"></use>
-					</svg>
-				</a>
-				<a href="" class="footer__link">
-					<svg class="footer__icon">
-						<use href="/images/sprite.svg#icon-yt"></use>
-					</svg>
-				</a>
-			</li>
-		</ul>
+          <li>
+            <a href="" class="footer__link">
+              <svg class="footer__icon">
+                <use href="./images/sprite.svg#icon-inst"></use>
+              </svg>
+            </a>
+            <a href="" class="footer__link">
+              <svg class="footer__icon">
+                <use href="./images/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+            <a href="" class="footer__link">
+              <svg class="footer__icon">
+                <use href="./images/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
+            <a href="" class="footer__link">
+              <svg class="footer__icon">
+                <use href="./images/sprite.svg#icon-yt"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
 
-		<ul class="footer-nav">
-			<li>
-				<a class="footer-nav__link" href="#">Чему вы научитесь</a>
-			</li>
-			<li>
-				<a class="footer-nav__link" href="#">Онлайн-платформа</a>
-			</li>
-			<li>
-				<a class="footer-nav__link" href="#">Стоимость</a>
-			</li>
-			<li>
-				<a class="footer-nav__link" href="#">Контакты</a>
-			</li>
-			<li>
-				<a class="footer-nav__link" href="#">Регистрация</a>
-			</li>
-		</ul>
+        <ul class="footer-nav">
+          <li>
+            <a class="footer-nav__link" href="#">Чему вы научитесь</a>
+          </li>
+          <li>
+            <a class="footer-nav__link" href="#">Онлайн-платформа</a>
+          </li>
+          <li>
+            <a class="footer-nav__link" href="#">Стоимость</a>
+          </li>
+          <li>
+            <a class="footer-nav__link" href="#">Контакты</a>
+          </li>
+          <li>
+            <a class="footer-nav__link" href="#">Регистрация</a>
+          </li>
+        </ul>
 
-		<ul class="footer-cont">
-			<li>
-				<a class="footer-cont__phone" href="tel:+74993489396">+7 (499) 348 93 96</a>
-				<a class="footer-cont__mail" href="mailto:info@ytyt.ru">info@ytyt.ru</a>
-			</li>
-			<li>
-				<p class="footer-cont__info">ИП Умаров Т. А.<br>ИНН 745216229809 ОГРНИП <br> 315745200001358</p>
-			</li>
-		</ul>
+        <ul class="footer-cont">
+          <li>
+            <a class="footer-cont__phone" href="tel:+74993489396">+7 (499) 348 93 96</a>
+            <a class="footer-cont__mail" href="mailto:info@ytyt.ru">info@ytyt.ru</a>
+          </li>
+          <li>
+            <p class="footer-cont__info">
+              ИП Умаров Т. А.<br />ИНН 745216229809 <br />ОГРНИП
+              315745200001358
+            </p>
+          </li>
+        </ul>
+        </div>
 
-		<div class="footer-btm">
-			<p>© 2024 ytyt — Все права защищены</p>
-			<a href="" class="footer-btm__meta footer-btm__meta--margin">Пользовательское соглашение</a>
-			<a href="" class="footer-btm__meta">Политика конфиденциальности</a>
-		</div>
-
-	</div>
-
-</footer>
-<script src="./js/menu.js"></script>
-<!--body-scroll-lock-->
-<script
-	 defer
-	 src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
-	 integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-	 crossorigin="anonymous"
-></script>
-</body>
+        <div class="footer-btm">
+          <p>© 2024 ytyt — Все права защищены</p>
+          <a href="" class="footer-btm__meta footer-btm__meta--margin">Пользовательское соглашение</a>
+          <a href="" class="footer-btm__meta">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/menu.js"></script>
+    <!--body-scroll-lock-->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
